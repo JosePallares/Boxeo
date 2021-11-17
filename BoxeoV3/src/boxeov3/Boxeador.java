@@ -33,7 +33,7 @@ private int num;
     public void run() {
         int tEspera;
         int vidafinal =0;
-       while(vida<0){
+       while(vida<vidafinal){
            
            tEspera = (int) Math.floor(Math.random()*10+2);
             try {
@@ -41,7 +41,7 @@ private int num;
             } catch (InterruptedException ex) {
                 Logger.getLogger(Boxeador.class.getName()).log(Level.SEVERE, null, ex);
             }
-            vida -=golpe;
+            vida = vida - golpe;
            
            System.out.println("Al boxeador " + num + " le quedan " + vida + " puntos de vida");
        } 
